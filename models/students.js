@@ -14,6 +14,8 @@ class Students {
         res.send(JSON.stringify(this.getData()));
     }
 
+    
+
     setData(data){
          setJson(this.filenameStudents,data);
     }
