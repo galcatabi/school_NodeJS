@@ -1,1 +1,35 @@
-[{"id_course":"art","id_student":["elad","gal","ron"]},{"id_course":"english","id_student":["elad","gal","ron"]},{"id_course":"history","id_student":["elad","gal","ron"]},{},{"id_course":"baba","id_student":"lala"}]
+[
+    {
+        "id_course": "art",
+        "id_student": [
+            "elad",
+            "gal",
+            "ron"
+        ]
+    },
+    {
+        "id_course": "english",
+        "id_student": [
+            "elad",
+            "gal",
+            "ron"
+        ]
+    },
+    {
+        "id_course": "history",
+        "id_student": [
+            "elad",
+            "gal",
+            "ron"
+        ]
+    },
+    {},
+    {
+        "id_course": "baba",
+        "id_student": "lala"
+    },
+    {
+        "id_course": "nana",
+        "id_student": "nanagaga"
+    }
+]
