@@ -1,7 +1,6 @@
 
 const express = require('express')
 const router = express.Router()
-const post = require('../models/post.model')
 const Students = require("../models/students.js");
 const Courses = require("../models/courses.js");
 let helper = require('../helpers/helper.js');
@@ -16,7 +15,6 @@ module.exports = function (router) {
     router.get('/getStudent', _students.getStudents.bind(_students));
     router.get('/getCourses', _courses.getCourses.bind(_courses));
     router.get('/studnetsInCourse/:course_id', _students.getStudentInCourse.bind(_students));
-    router.get('/OutstandingStudents', _students.OutstandingStudents.bind(_students));
     router.get('/Above90Average', _students.allStudentsAbove90Average.bind(_students));
     router.get('/largestAverage', _students.largestAverage.bind(_students));
 

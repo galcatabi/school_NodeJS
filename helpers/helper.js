@@ -1,8 +1,6 @@
 const fs = require('fs');
 const path = require('path');
 
-
-
 function setJson(filename, content) {
     fs.writeFileSync(path.join(__dirname, `${filename}.json`) , JSON.stringify(content), 'utf8', (err) => {
         if (err) {

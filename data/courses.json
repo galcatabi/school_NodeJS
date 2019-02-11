@@ -22,14 +22,6 @@
             "gal",
             "ron"
         ]
-    },
-    {},
-    {
-        "id_course": "baba",
-        "id_student": "lala"
-    },
-    {
-        "id_course": "nana",
-        "id_student": "nanagaga"
     }
-]
+
+]  
