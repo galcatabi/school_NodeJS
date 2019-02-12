@@ -54,21 +54,23 @@ class Students {
     }
 
     addMoreCourseForStudent(req, res, next) {
-        const allStudents = this.getData();
+        const students = this.getData();
         const { id_course, id_student, score } = req.body;
         const reqBody = req.body;
-        const newCours = {
+        const newCourse = {
             [reqBody.id_course]: {
                 score: reqBody.score
             }
         }
-        var courseObj = allStudents.student;
+        for (let student of students) {
+            if (student.id_student == id_student) {
+                student.id_course[id_course] = newCourse;
+                console.log(student.id_course)
+                this.setData(students);
 
-        if (student.id_student == newCours.id_student && student.id_course != newCours.id_course) {
-            courseObj.push(newCours);
+            }
         }
-        this.setData(courseObj);
-        res.send(newCours);
+        res.send(newCourse);
     }
 
     insertScoreForCourse(req, res, next) {

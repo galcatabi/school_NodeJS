@@ -1,1 +1,1 @@
-[{"id_student":"elad","id_course":{"art":{"score":97},"english":{"score":100}}},{"id_student":"gal","id_course":{"history":{"score":87},"english":{"score":68}}},{"id_student":"eden","id_course":{"art":{"score":"93"}}}]
+[{"id_student":"elad","id_course":{"art":{"score":97},"english":{"score":100}}},{"id_student":"gal","id_course":{"history":{"score":87},"english":{"score":68}}},{"id_student":"eden","id_course":{"art":{"score":"93"},"history":{"history":{"score":"90"}}}}]
