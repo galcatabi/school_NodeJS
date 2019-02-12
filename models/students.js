@@ -27,21 +27,16 @@ class Students {
         const reqBody = req.body;
         const newStudent = {
             id_student: reqBody.id_student,
-            id_course: {}
+            id_course: {
+                [reqBody.id_course]: {
+                    score: reqBody.score
+                }
+            },
         }
+        allStudents.push(newStudent);
 
-        newStudent[reqBody.id_course] = {
-            score: reqBody.score
-        }
-        for (let student of students) {
-            if (student.id_student != newStudent.id_student) {
-                allStudents.push(newStudent);
-            }
-            this.setData(allStudents);
-            res.send({ "sucess": true });
-            return;
-        }
-        res.send({ "faild": true });
+        this.setData(allStudents);
+        res.send(newStudent);
     }
 
     getStudentInCourse(req, res, next) {
@@ -67,16 +62,17 @@ class Students {
                 score: reqBody.score
             }
         }
-        for (let student of allStudents) {
-            if (student.id_student == id_student && student.id_course != id_course) {
-                allStudents[student.id_student] = newCours;
-            }
+        var courseObj = allStudents.student;
 
-            this.setData(allStudents);
-            this.setData(student);
-            res.send({ "sucess": true });
-            return;
-        }
+        // for (let student of allStudents) {
+            if (student.id_student == newCours.id_student && student.id_course != newCours.id_course) {
+                courseObj.push(newCours);
+            }
+            this.setData(courseObj);
+            // this.setData(student);
+            res.send(newCours);
+            // return;
+        // }
 
 
     }

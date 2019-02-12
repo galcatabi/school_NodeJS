@@ -22,6 +22,9 @@
             "gal",
             "ron"
         ]
+    },
+    {
+        "id_course": "art",
+        "id_student": "shay"
     }
-
-]  
+]

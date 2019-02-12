@@ -21,7 +21,10 @@ module.exports = function (router) {
     
     router.post('/addStudent', _students.addStudent.bind(_students));
     router.post('/insertScoreForCourse', _students.insertScoreForCourse.bind(_students));
+    router.post('/addMoreCourseForStudent', _students.addMoreCourseForStudent.bind(_students));
 
+
+    
     router.post('/addCourse', _courses.addCourse.bind(_courses));
 
 }
