@@ -64,17 +64,11 @@ class Students {
         }
         var courseObj = allStudents.student;
 
-        // for (let student of allStudents) {
-            if (student.id_student == newCours.id_student && student.id_course != newCours.id_course) {
-                courseObj.push(newCours);
-            }
-            this.setData(courseObj);
-            // this.setData(student);
-            res.send(newCours);
-            // return;
-        // }
-
-
+        if (student.id_student == newCours.id_student && student.id_course != newCours.id_course) {
+            courseObj.push(newCours);
+        }
+        this.setData(courseObj);
+        res.send(newCours);
     }
 
     insertScoreForCourse(req, res, next) {
